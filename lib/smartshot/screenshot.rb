@@ -9,7 +9,7 @@ module Smartshot
       end
       Capybara.run_server = options.delete(:run_server) || false
       Capybara.current_driver = :poltergeist
-      Capybara.default_wait_time = options.delete(:default_wait_time) || 30
+      Capybara.default_max_wait_time = options.delete(:default_wait_time) || 30
     end
 
     def initialize(options = {})
